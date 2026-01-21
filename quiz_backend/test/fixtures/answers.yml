@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: one
+  selected_option_id: 1
+
+two:
+  question: two
+  selected_option_id: 1
