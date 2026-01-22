@@ -16,6 +16,7 @@ class Api::QuizzesController < Api::BaseController
   end
 
   def submit
+    Rails.logger.debug "Params=======> #{params.inspect}"
     quiz = Quiz.includes(questions: :options).find(params[:id])
     score = 0
 
@@ -29,7 +30,7 @@ class Api::QuizzesController < Api::BaseController
 
       Answer.create!(
         question_id: question.id,
-        select_option_id: ans[:option_id]
+        selected_option_id: ans[:option_id]
       )
 
     end
