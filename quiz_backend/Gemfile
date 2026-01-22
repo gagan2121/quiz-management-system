@@ -2,6 +2,15 @@ source "https://rubygems.org"
 
 ruby "3.3.1"
 
+gem 'rack-cors'
+gem 'rails_admin'
+gem 'devise'
+gem 'sassc-rails'
+
+group :development, :test do
+  gem 'sassc-rails'
+end
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.6"
 
@@ -45,3 +54,4 @@ group :development do
   # gem "spring"
 end
 
+gem "sassc-rails"
